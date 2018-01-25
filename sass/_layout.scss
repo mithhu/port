@@ -1,0 +1,104 @@
+.header {
+    background-image: linear-gradient(
+            to right bottom,
+            rgba($color-primary-light, 0.4),
+            rgba($color-primary-dark, 0.4)),
+            url(../img/jeshoots-com-219386.jpg);
+         background-size: cover;
+         background-position: top;
+         position: relative;   
+
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        height: 95vh;
+        z-index: 200;
+
+        @include respond(tab-land) {
+                clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+                height:95vh;
+        }
+        
+        @include respond(phone) {
+                clip-path: polygon(0 0, 100% 0, 100% 82vh, 0 100%);
+                height: 90vh;
+        }
+
+        
+       
+        
+    
+}
+
+
+
+
+
+////navigation
+
+nav {
+        display: none;
+}
+
+.nav__bar {
+        
+        background-color: $color-primary;
+        position: fixed;
+        
+        height: 8rem;
+        width: 96.85%;
+        display: block;
+        border-bottom: 3px solid #FF3366;
+      
+        top: 0;
+      
+        padding: 2rem;
+        box-shadow: var(--shadow-dark);
+       
+        z-index: 30000;
+
+        @include respond(laptop) {
+                width: 96.05%;
+        }
+        @include respond(tab-land) {
+                width: 95.3%;
+        }
+        @include respond(tab-port) {
+                width: 94.7%;
+        }
+        @include respond(phone-medium) {
+                width: 92%;
+        }    
+        
+}
+
+.nav__bar .nav__list {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 5rem;
+        
+        
+}
+.nav__bar .nav__list li {
+        font-size: 2.4rem;
+        list-style: none;
+      
+       
+        &:not(:last-child) {
+                padding-right: 1rem;
+        }
+}
+
+
+.nav__bar .nav__list li a:link,
+.nav__bar .nav__list li a:visited {
+        text-decoration: none;
+        color:#fff;
+        transition: all 1s;
+        padding: 7px;
+}
+
+.nav__bar .nav__list li a:hover,
+.nav__bar .nav__list li a:active {
+        color: $color-primary;
+        background-color: #0F1126;
+        border-radius: 10px;
+}
